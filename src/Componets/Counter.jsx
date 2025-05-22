@@ -1,6 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
-
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import Img1 from '../assets/freelancer.png'
 import Img2 from '../assets/earn.png'
 import Img3 from '../assets/trained.png'
@@ -8,6 +8,15 @@ import Img4 from '../assets/time.png'
 
 
 const Counter = () => {
+
+const { text } = useTypewriter({
+  words: [ ' Proud Of Passionate .', ' Proud Of Enthusiastic .', ' Proud Of Spirited .', ' Proud Of Excitable .'],
+  loop: true,
+  typeSpeed: 100,
+  deleteSpeed: 70,
+  delaySpeed: 1500,
+});
+
     return (
 <div className='my-25 w-11/12 mx-auto'>
       
@@ -15,12 +24,14 @@ const Counter = () => {
   <h1 className='font-bold text-4xl text-[#AD56C4]'>
    Our Acheviment
   </h1>
-  <p className='font-normal text-lg text-[#f000b8]'>
-    Work with Clients Who Value Your Talent. Build a Future You’re Proud Of.
-Where Passion Meets Possibility.
-
-
-    </p>
+  <h1 className='font-normal text-lg text-[#f000b8]' style={{margin:'50px'}}>
+    Work with Clients Who Value Your Talent. Build a Future You’re Proud Of  
+    <span style={{fontWeight: 'bold', color: 'green'}}>
+{text}
+    </span>
+     <Cursor />
+{/* Where Passion Meets Possibility. */}
+    </h1>
       </div>
       
  <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 '>
