@@ -15,6 +15,8 @@ import BrowseTasks from './Pages/BrowseTasks.jsx';
 import PrivateRoutes from './Routes/PrivateRoutes.jsx';
 import AddTask from './Pages/AddTask.jsx';
 import MyPostedTasks from './Pages/MyPostedTasks.jsx';
+import TaskDetails from './Pages/TaskDetails.jsx';
+
 
 
 const router = createBrowserRouter([
@@ -26,15 +28,20 @@ const router = createBrowserRouter([
         path: "/",
         Component: Home,
           },
-          {
-        path: "/browse-task",
-        Component: BrowseTasks,
-          },
-           {
+            {
         path: "/add-task",
         element: <AddTask></AddTask>
-       
           },
+          {
+        path: "/browse-task",
+        loader: () =>fetch('http://localhost:5000/tasks'),
+        Component: BrowseTasks,
+          },
+        {
+          path:'/task-details/:id',
+          loader: () => fetch('http://localhost:5000/tasks'),
+          Component: TaskDetails,
+        },
           {
             path: '/my-posted-task',
             element: <MyPostedTasks></MyPostedTasks>

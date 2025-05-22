@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 const AddTask = () => {
   const handleAddTask = e => {
         e.preventDefault();
@@ -10,7 +11,7 @@ const AddTask = () => {
         //  bid: 0,
 
 //server db method add
-      fetch('http://localhost:5000/tasks',{
+fetch('http://localhost:5000/tasks',{
        method: "POST",
        headers:{
            "Content-Type": "application/json",
@@ -20,7 +21,15 @@ const AddTask = () => {
          .then(res=>res.json())
          .then(data=>{
               console.log('data after db', data);
-             }
+              if(data.insertedId){
+              console.log('added successfully');
+ Swal.fire({
+  title: "Task Added Successfully !",
+  icon: "success",
+  draggable: true
+              });
+    }
+    }
         ) 
     }
 
@@ -104,6 +113,11 @@ onSubmit={handleAddTask}>
    <label className="label">Details</label>
     <input type="text" name='details' className="input w-full" placeholder="Details Name" />
     </fieldset>
+
+     {/* <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border my-6 p-4">
+    <label className="label">Photo</label>
+    <input type="text" name='photo' className="input w-full" placeholder="Photo URL" />
+</fieldset> */}
 
 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4"> 
       <label className="label">User Name</label>
