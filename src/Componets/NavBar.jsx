@@ -94,7 +94,14 @@ text-[#f000b8]'>
 <li className=' font-semibold text-lg text-[#f000b8]'>
           <NavLink className={({ isActive }) =>
         isActive ? "text-[#AD56C4] font-bold" : "text-[#f000b8] font-semibold"
-      } to='/my-posted-task'>My  Posted Tasks</NavLink></li>
+      } to='/my-posted-task'>My  Posted Tasks</NavLink>
+      </li>
+
+<li className=' font-semibold text-lg text-[#f000b8]'>
+<NavLink className={({ isActive }) =>
+        isActive ? "text-[#AD56C4] font-bold" : "text-[#f000b8] font-semibold"
+      } to='/contact'>Contact Us</NavLink>
+      </li>
 
       </ul>
   </div>

@@ -15,6 +15,7 @@ import AddTask from './Pages/AddTask.jsx';
 import MyPostedTasks from './Pages/MyPostedTasks.jsx';
 import TaskDetails from './Pages/TaskDetails.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
+import Contact from './Pages/Contact.jsx';
 
 
 
@@ -44,7 +45,11 @@ const router = createBrowserRouter([
           {
             path: '/my-posted-task',
             element: <MyPostedTasks></MyPostedTasks>
-          }
+          },
+          {
+          path: '/contact',
+          Component:Contact,
+        },
         ]
   },
   {
@@ -59,6 +64,7 @@ const router = createBrowserRouter([
           path:"/auth/register",
           Component:Register,
         },
+        
       ]
       },
 ]);
