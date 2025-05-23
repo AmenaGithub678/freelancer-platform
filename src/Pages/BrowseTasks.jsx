@@ -7,7 +7,10 @@ const BrowseTasks = () => {
     console.log(tasks);
     return (
 <div>
-<h1>Browse Task</h1>
+<h1 className='font-bold text-4xl 
+text-[#AD56C4] text-center mx-auto
+my-10'>Browse Task</h1>
+
 <div className='grid grid-cols-1  gap-1.5'>
 
 {/* table format */}

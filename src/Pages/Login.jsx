@@ -1,10 +1,14 @@
-import { useRef, useState } from "react";
+import { use, useRef, useState } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../context/AuthContext";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-
+const {signIn,
+loginWithGoogle
+} = use(AuthContext)
     
- const refEmail = useRef()
+const refEmail = useRef()
 const [useEmail, setUserEmail] = useState("");
 
  const handleLogin = (e) => {
@@ -13,7 +17,30 @@ const [useEmail, setUserEmail] = useState("");
     const email = form.email.value;
     const password = form.password.value;
      console.log({ email, password });
+
+     signIn(email,password)
+     .then((result)=>{
+      const user = result.user;
+      console.log(user);
+     })
+     .catch((error)=>{
+      const errorCode = error.code;
+      const errorMessage = error.errorMessage;
+      alert(errorCode,errorMessage)
+     });
+
+
  }
+//  google 
+const handlewhithMygoogle = () => {
+  loginWithGoogle()
+  .then(()=>{
+    alert('successfully login with google!!')
+  })
+  .catch((error)=>{
+
+  })
+}
     return (
 <div>
 <div className="flex justify-center min-h-screen items-center"
@@ -67,13 +94,12 @@ const [useEmail, setUserEmail] = useState("");
                 <p className='text-center font-semibold'>Or</p>
                 <div className="mt-1">
 
-                  <button 
-
-                //   onClick={handlewhithMygoogle} 
+  <button 
+    onClick={handlewhithMygoogle} 
 
                   className="btn btn-outline w-full flex items-center justify-center gap-2">
                     
-                    {/* <FcGoogle className="text-xl" /> */}
+     <FcGoogle className="text-xl" />
 
                     Register with Google
                   </button>

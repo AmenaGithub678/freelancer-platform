@@ -2,6 +2,7 @@ import React from 'react';
 import { GrAchievement } from "react-icons/gr";
 import { GiPayMoney } from "react-icons/gi";
 import { AiOutlineSafety } from "react-icons/ai";
+import acheivementImg from "../assets/acheviment.png"
 const Different = () => {
     return (
 
@@ -31,14 +32,14 @@ const Different = () => {
         </li>
       </ul>
 <div className="mt-6">
-  <button className="btn btn-primary">Join Now</button>
+  <button className="btn btn-primary">Log In Now</button>
       </div>
     </div>
 
     {/* Image Section */}
     <div className="w-full lg:w-1/2">
       <img
-        src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+        src={acheivementImg}
         alt="Freelancer"
         className="w-full h-full object-cover"
       />

@@ -1,11 +1,14 @@
 import React, { use } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
-
+import { FcGoogle } from "react-icons/fc";
 const Register = () => {
 
-    const {createUser} = use(AuthContext)
-    console.log(createUser);
+    const {
+      createUser,setUser,
+      loginWithGoogle
+    } = use(AuthContext)
+     console.log(createUser);
 
 const  handleRegister=(e)=>{
   e.preventDefault();
@@ -19,15 +22,26 @@ console.log(email,password);
 
 // create user in the firebase 
 createUser(email, password)
-   .then(result =>{
-    console.log(result);
+   .then((result) =>{
+    // console.log(result);
+    const user = result.user;
+    setUser(user);
    })
    .catch(error =>{
     console.log(error);
    })
 
 }  
-    
+// Google
+const handleMygoogle = () =>{
+  loginWithGoogle()
+  .then(()=>{
+    alert('succefully login in with google!')
+  })
+  .catch((error)=>{
+
+  })
+}
 
 
     return (
@@ -101,11 +115,11 @@ className="card-body">
  <div className="mt-1">
   <button 
   
-//   onClick={handleMygoogle} 
+  onClick={handleMygoogle} 
   
   className="btn btn-outline w-full flex items-center justify-center gap-2">
 
-    {/* <FcGoogle className="text-xl" /> */}
+    <FcGoogle className="text-xl" />
 
     Register with Google
   </button>

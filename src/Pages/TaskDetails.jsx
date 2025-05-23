@@ -16,7 +16,8 @@ const TaskDetails = () => {
 
     return (
         <div>
-            <h1>This is task details page</h1>
+            <h1 className='text-2xl text-[#AD56C4] text-center font-bold
+            my-10  '>Want To Know About More! Welcome to task details page</h1>
 <div >
  <TaskDetailsCard taskDetails={taskDetails}></TaskDetailsCard>
 </div>
