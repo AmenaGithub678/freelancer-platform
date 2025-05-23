@@ -9,7 +9,7 @@ const {_id,title,category,description,deadline,budget,details,userName,email} = 
        <div className="px-4 sm:px-6 md:px-8">
       <div className="bg-[#FF8DA1] text-black rounded-lg shadow-lg p-4 flex flex-col md:flex-row items-center gap-6">
 
-        {/* Image */}
+
         <div className="relative w-24 h-24 md:w-28 md:h-28">
          <img
             src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
@@ -18,13 +18,12 @@ const {_id,title,category,description,deadline,budget,details,userName,email} = 
           />
         </div>
 
-        {/* Task Content */}
         <div className="w-full text-center">
 
-          {/* ✅ Centered Title with no extra margin */}
+         
           <h2 className="text-2xl font-bold mb-1">{title}</h2>
 
-          {/* ✅ Main Info Row */}
+         
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-blue-700 text-sm sm:text-base">
             <p><strong>Category:</strong> {category}</p>
             <p><strong>Description:</strong> {description}</p>

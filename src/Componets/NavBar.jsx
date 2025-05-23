@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from "../assets/mylogo.png"
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 const NavBar = () => {
     return (
       <div className='w-full mx-auto'>
@@ -87,8 +87,14 @@ text-[#f000b8]'>
   <div className="navbar-end">
     <div className="dropdown dropdown-end">
      <div className='hidden lg:flex gap-4 items-center'>
-<button className='btn btn-outline btn-secondary'>Login</button>
+
+      <Link to="/auth/login">
+      <button className='btn btn-outline btn-secondary'>Login</button>
+      </Link>
+<Link to="/auth/register">
 <button className='btn btn-outline btn-secondary'>Rgesiter</button>
+</Link>
+
      </div>
     
     </div>

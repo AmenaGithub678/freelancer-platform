@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,10 +11,10 @@ import AuthLayout from './Layouts/AuthLayout.jsx';
 import Login from './Pages/Login.jsx';
 import Register from './Pages/Register.jsx';
 import BrowseTasks from './Pages/BrowseTasks.jsx';
-import PrivateRoutes from './Routes/PrivateRoutes.jsx';
 import AddTask from './Pages/AddTask.jsx';
 import MyPostedTasks from './Pages/MyPostedTasks.jsx';
 import TaskDetails from './Pages/TaskDetails.jsx';
+import AuthProvider from './context/AuthProvider.jsx';
 
 
 
@@ -67,6 +66,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )
