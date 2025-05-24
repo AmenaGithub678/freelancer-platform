@@ -27,6 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayouts,
+    errorElement: <Contact></Contact>,
     children:[
         {
         path: "/",
@@ -69,6 +70,7 @@ const router = createBrowserRouter([
   {
       path:"/auth",
       Component: AuthLayout,
+       errorElement: <Contact></Contact>,
       children:[
         {
           path:"/auth/login",

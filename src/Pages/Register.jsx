@@ -2,12 +2,14 @@ import React, { use } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import { FcGoogle } from "react-icons/fc";
+import Swal from 'sweetalert2';
 const Register = () => {
 
     const {
       createUser,setUser,
       loginWithGoogle
-    } = use(AuthContext)
+    } = use(AuthContext);
+
      console.log(createUser);
 
 const  handleRegister=(e)=>{
@@ -19,6 +21,31 @@ const email = formData.get('email');
 const password = formData.get('password');
 console.log(email,password);
 
+if(password.length<6){
+       Swal.fire({
+      icon: 'error',
+      title: 'Weak Password',
+      text: 'Password must be at least 6 characters long.',
+    });
+    return;
+      
+  }
+  if( !/[a-z]/.test(password)){
+    Swal.fire({
+      icon: 'error',
+      title: 'Password Issue',
+      text: 'Password must contain at least one lowercase letter.',
+    });
+    return;
+}
+if( !/[A-Z]/.test(password)){
+   Swal.fire({
+      icon: 'error',
+      title: 'Password Issue',
+      text: 'Password must contain at least one uppercase letter.',
+    });
+    return;
+}
 
 // create user in the firebase 
 createUser(email, password)
@@ -26,6 +53,15 @@ createUser(email, password)
     // console.log(result);
     const user = result.user;
     setUser(user);
+
+ Swal.fire({
+      icon: 'success',
+      title: 'Registration Successful',
+      text: 'Your account has been created successfully!',
+      showConfirmButton: false,
+      timer: 2000
+    });
+
    })
    .catch(error =>{
     console.log(error);

@@ -1,17 +1,16 @@
 import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import PostTaskCard from '../Componets/PostTaskCard';
-
-
 const MyPostedTasks = () => {
 const { user } = use(AuthContext);
     const [tasks, setTasks] = useState([]);
 
  useEffect(() => {
-  fetch(`http://localhost:5000/tasks?email=${user?.email}`)
+  fetch(`http://localhost:5000/task/${user?.email}`)
     .then(res => res.json())
     .then(data => setTasks(data));
 }, [user]);
+console.log(tasks);
 const handleUpdate = (task) => {
   console.log('Update task with ID:', id);
   

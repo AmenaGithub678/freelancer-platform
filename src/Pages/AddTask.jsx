@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { use } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../context/AuthContext';
 const AddTask = () => {
+  const {user} = use(AuthContext);
   const handleAddTask = e => {
         e.preventDefault();
         const form = e.target;
@@ -124,12 +126,12 @@ onSubmit={handleAddTask}>
 
 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4"> 
       <label className="label">User Name</label>
-      <input type="text" name="userName" className="input w-full" value="John Doe" readOnly />
+      <input type="text" name="userName" className="input w-full" value={user?.displayName} readOnly />
     </fieldset>
  
 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4"> 
       <label className="label">User Email</label>
-      <input type="email" name="email" className="input w-full" value="user@example.com" readOnly />
+      <input type="email" name="email" className="input w-full" value={user?.email} readOnly />
     </fieldset>
     </div>
      <input type="submit" 

@@ -1,5 +1,5 @@
 import { use, useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 
@@ -10,6 +10,11 @@ loginWithGoogle
     
 const refEmail = useRef()
 const [useEmail, setUserEmail] = useState("");
+
+ // location
+  const location = useLocation()
+
+   const navigate = useNavigate();
 
  const handleLogin = (e) => {
     e.preventDefault();
@@ -22,6 +27,8 @@ const [useEmail, setUserEmail] = useState("");
      .then((result)=>{
       const user = result.user;
       console.log(user);
+
+      navigate(location?.state ? location.state : "/")
      })
      .catch((error)=>{
       const errorCode = error.code;
