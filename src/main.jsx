@@ -17,6 +17,7 @@ import TaskDetails from './Pages/TaskDetails.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
 import Contact from './Pages/Contact.jsx';
 import UpadateTask from './Componets/UpadateTask.jsx';
+import PrivateRoute from './context/PrivateRoute.jsx';
 
 
 
@@ -33,7 +34,9 @@ const router = createBrowserRouter([
           },
             {
         path: "/add-task",
-        element: <AddTask></AddTask>
+        element: <PrivateRoute>
+          <AddTask></AddTask>
+        </PrivateRoute>
           },
           {
         path: "/browse-task",
@@ -47,7 +50,9 @@ const router = createBrowserRouter([
         },
           {
             path: '/my-posted-task',
-            element: <MyPostedTasks></MyPostedTasks>
+            element: <PrivateRoute>
+              <MyPostedTasks></MyPostedTasks>
+            </PrivateRoute>
           },
           {
             path: '/updateTask/:id',

@@ -118,10 +118,8 @@ className="card-body">
   onClick={handleMygoogle} 
   
   className="btn btn-outline w-full flex items-center justify-center gap-2">
-
+  Register 
     <FcGoogle className="text-xl" />
-
-    Register with Google
   </button>
 </div>           
           </fieldset>

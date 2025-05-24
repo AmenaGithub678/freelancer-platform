@@ -97,11 +97,11 @@ const handlewhithMygoogle = () => {
   <button 
     onClick={handlewhithMygoogle} 
 
-                  className="btn btn-outline w-full flex items-center justify-center gap-2">
-                    
+className="btn btn-outline w-full flex items-center justify-center gap-2">
+                     Login 
      <FcGoogle className="text-xl" />
 
-                    Register with Google
+                   
                   </button>
                 </div>
 

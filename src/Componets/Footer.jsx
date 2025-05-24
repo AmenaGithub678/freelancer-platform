@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router';
-
+import { FcSmartphoneTablet } from "react-icons/fc";
+import { MdAttachEmail } from "react-icons/md";
 const Footer = () => {
     return (
 <footer className="footer footer-horizontal footer-center bg-[#FFC2BA] text-base-content rounded p-10">
@@ -30,8 +31,15 @@ const Footer = () => {
   </nav>
      <div className="text-center mt-4">
       <h1>Terms & Condition</h1>
-<p className="text-base font-medium text-[#0F0F0FB3]">📧 Email: support@freelancefusion.com</p>
-<p className="text-base font-medium text-[#0F0F0FB3]">📞 Phone: +880 1234-567890</p>
+<div className="flex items-center justify-center gap-2 text-base font-medium text-[#0F0F0FB3]">
+  <MdAttachEmail />
+  <span>Email: support@freelancefusion.com</span>
+</div>
+<div className="flex items-center justify-center gap-2 text-base font-medium text-[#0F0F0FB3]">
+  <FcSmartphoneTablet />
+  <span>Phone: +880 1234-567890</span>
+</div>
+
             </div>
   <nav>
     <div className="grid grid-flow-col gap-4">
