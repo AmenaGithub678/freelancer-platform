@@ -2,18 +2,19 @@ import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import PostTaskCard from '../Componets/PostTaskCard';
 
+
 const MyPostedTasks = () => {
 const { user } = use(AuthContext);
     const [tasks, setTasks] = useState([]);
 
-    useEffect(() => {
+ useEffect(() => {
   fetch(`http://localhost:5000/tasks?email=${user?.email}`)
     .then(res => res.json())
     .then(data => setTasks(data));
 }, [user]);
-const handleUpdate = (id) => {
-    console.log('Update task with ID:', id);
-    // Navigate to update page or open modal
+const handleUpdate = (task) => {
+  console.log('Update task with ID:', id);
+  
   };
 
   const handleDelete = (id) => {
@@ -23,14 +24,11 @@ const handleUpdate = (id) => {
 
   const handleViewBids = (id) => {
     console.log('View bids for task ID:', id);
-    // Show modal or navigate to bid details page
+    // Show modal 
   };
 
     return (
-<div 
-className="max-w-5xl 
-mx-auto px-4 
-py-6">
+<div className="max-w-5xl mx-auto px-4 py-6">
       <h1 className="text-3xl font-bold mb-6 text-center">My Posted Tasks</h1>
 
       {tasks.length === 0 ? (
@@ -41,13 +39,15 @@ py-6">
             <PostTaskCard
               key={task._id}
               task={task}
-              onUpdate={handleUpdate}
+              onUpdate={() => handleUpdate(task)} 
               onDelete={handleDelete}
               onViewBids={handleViewBids}
             />
           ))}
         </div>
       )}
+
+   
     </div>
     );
 };

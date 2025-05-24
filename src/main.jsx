@@ -16,6 +16,9 @@ import MyPostedTasks from './Pages/MyPostedTasks.jsx';
 import TaskDetails from './Pages/TaskDetails.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
 import Contact from './Pages/Contact.jsx';
+import UpadateTask from './Componets/UpadateTask.jsx';
+
+
 
 
 
@@ -46,6 +49,12 @@ const router = createBrowserRouter([
             path: '/my-posted-task',
             element: <MyPostedTasks></MyPostedTasks>
           },
+          {
+            path: '/updateTask/:id',
+            loader: ({params}) =>fetch(`http://localhost:5000/tasks/${params.id}`),
+            Component: UpadateTask,
+          },
+
           {
           path: '/contact',
           Component:Contact,
