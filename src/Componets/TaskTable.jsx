@@ -6,11 +6,10 @@ const {_id,title,category,description,deadline}=task;
 
     return (
 <tr>
-    
-      <td>{title}</td>
-      <td>{category}</td>
-      <td>{description}</td>
-      <td>{deadline}</td>
+      <td className='text-sm font-semibold'>{title}</td>
+      <td className='text-sm font-semibold'>{category}</td>
+      <td className='text-sm font-semibold'>{description}</td>
+      <td className='text-sm font-semibold'>{deadline}</td>
         <td>
 <Link to={`/task-details/${_id}`}>
 <button className="btn btn-outline btn-secondary">

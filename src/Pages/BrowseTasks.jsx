@@ -15,9 +15,9 @@ my-10'>Browse Task</h1>
 
 {/* table format */}
 <div className="overflow-x-auto">
-        <table className="table table-xs w-full">
+<table className="table w-full my-10 ">
           <thead>
-            <tr>
+            <tr className='text-[#f000b8] text-lg font-semibold'>
               <th>Task Title</th>
               <th>Category</th>
               <th>Description</th>

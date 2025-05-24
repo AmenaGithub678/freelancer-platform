@@ -7,7 +7,7 @@ const AddTask = () => {
         const formData = new FormData(form);
 
          const newTask = {
-    ...Object.fromEntries(formData.entries()),//cope data 
+    ...Object.fromEntries(formData.entries()),//copy data 
     bid: 0
   };
 
@@ -41,8 +41,8 @@ fetch('http://localhost:5000/tasks',{
   <div 
   className='p-12 text-center space-y-4'>
     <h1 className="text-6xl text-[#AD56C4]">
-        Add Task</h1>
-    <p className='text-white font-semibold'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+        Add a New Task</h1>
+    <p className='text-white font-semibold'>Use this form to post a new task and connect with skilled professionals who can help you get the job done. Provide clear and detailed information about your task, including the category, description, deadline, and budget. Once submitted, your task will be listed publicly and available for users to view and place bids on. Make sure your information is accurate to attract the right talent!</p>
     </div>  
 
 {/* form design */}

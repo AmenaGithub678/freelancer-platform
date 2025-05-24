@@ -29,7 +29,7 @@ const handleUpdate = (task) => {
 
     return (
 <div className="max-w-5xl mx-auto px-4 py-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">My Posted Tasks</h1>
+      <h1 className="text-6xl text-[#AD56C4] text-center my-5">My Posted Tasks</h1>
 
       {tasks.length === 0 ? (
         <p className="text-center text-gray-500">No tasks posted yet.</p>
