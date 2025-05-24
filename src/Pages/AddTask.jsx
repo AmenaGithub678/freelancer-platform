@@ -5,10 +5,13 @@ const AddTask = () => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
-        const newTask = Object.fromEntries(formData.entries())
-        console.log(newTask);
 
-        //  bid: 0,
+         const newTask = {
+    ...Object.fromEntries(formData.entries()),//cope data 
+    bid: 0
+  };
+
+  console.log(newTask);
 
 //server db method add
 fetch('http://localhost:5000/tasks',{

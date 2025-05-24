@@ -14,12 +14,36 @@ const TaskDetails = () => {
         settaskDetails(taskDetails)  
     },[data,id])
 
+
+
+const handleBid = async (taskId) => {
+  try {
+    const res = await fetch(`http://localhost:5000/tasks/${taskId}/bid`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    const data = await res.json();
+    if (data.modifiedCount > 0) {
+      // fetch updated data again
+      const updated = data => data._id === taskId;
+      const newDetails = data.find(updated);
+      settaskDetails({ ...newDetails, bid: newDetails.bid + 1 });
+    }
+  } catch (error) {
+    console.error('Error updating bid:', error);
+  }
+};
+
+
     return (
         <div>
-            <h1 className='text-2xl text-[#AD56C4] text-center font-bold
+ <h1 className='text-2xl text-[#AD56C4] text-center font-bold
             my-10  '>Want To Know About More! Welcome to task details page</h1>
 <div >
- <TaskDetailsCard taskDetails={taskDetails}></TaskDetailsCard>
+ <TaskDetailsCard taskDetails={taskDetails}
+ handleBid={handleBid}></TaskDetailsCard>
 </div>
            
         </div>

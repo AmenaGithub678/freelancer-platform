@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskDetailsCard = ({taskDetails}) => {
+const TaskDetailsCard = ({taskDetails, handleBid}) => {
     // console.log(taskDetails);
 
 const {_id,title,category,description,deadline,budget,details,userName,email} = taskDetails || {};
@@ -36,6 +36,13 @@ const {_id,title,category,description,deadline,budget,details,userName,email} = 
             <p><strong>User:</strong> {userName}</p>
             <p><strong>Email:</strong> {email}</p>
           </div>
+          <div><button 
+  onClick={() => handleBid(taskDetails._id)} 
+  className="btn btn-sm bg-[#AD56C4] text-white mt-4"
+>
+  Bid
+</button>
+</div>
         </div>
       </div>
     </div>
