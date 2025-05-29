@@ -5,8 +5,9 @@ const DarkModeToggler = () => {
     
     const {darkMode,setdarkMode} = useDarkMode();
     return (
-        <div>
-            <button onClick={()=> setdarkMode(!darkMode)}
+        <div className='mr-4'>
+            <button 
+            onClick={()=> setdarkMode(!darkMode)}
             className="btn btn-neutral btn-outline">
                { darkMode ? " ☀️   Light Mode":" 🌙 Dark Mode"}
                 </button>
