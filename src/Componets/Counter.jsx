@@ -18,7 +18,7 @@ const { text } = useTypewriter({
 });
 
     return (
-<div className='my-25 w-11/12 mx-auto'>
+<div className='mt-25 w-11/12 mx-auto'>
       
 <div className=' content-center items-center text-center'>
   <h1 className='font-bold text-4xl text-[#AD56C4]'>
@@ -35,7 +35,9 @@ const { text } = useTypewriter({
       </div>
       
  <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 '>
-<div className="card  bg-[#0F0F0F0D] card-md shadow-sm">
+<div className="card  
+bg-[#FAFFCA] card-md 
+shadow-sm mb-10">
 <div className="card-body flex flex-col items-center text-center">
   <img src={Img1} className='w-[50px]'/>
           <h2 className="card-title text-5xl text-[#0F0F0F] font-bold">  <CountUp end={199} 
@@ -46,7 +48,10 @@ const { text } = useTypewriter({
         </div>
       </div>
       
-      <div className="card  bg-[#0F0F0F0D] card-md shadow-sm">
+      <div className="card  
+      bg-[#FAFFCA]
+      card-md shadow-sm
+      mb-10">
         <div className="card-body flex flex-col items-center text-center">
          
           <img src={Img2} className='w-[50px]'/>
@@ -58,7 +63,10 @@ const { text } = useTypewriter({
         </div>
       </div>
       
-      <div className="card bg-[#0F0F0F0D] card-md shadow-sm">
+      <div className="card 
+      bg-[#FAFFCA] 
+      card-md shadow-sm
+      mb-10">
         <div className="card-body flex flex-col items-center text-center">
        
           <img src={Img3} className='w-[50px]'/>
@@ -69,7 +77,10 @@ const { text } = useTypewriter({
         </div>
       </div>
       
-      <div className="card bg-[#0F0F0F0D] card-md shadow-sm">
+      <div className="card 
+      bg-[#FAFFCA]
+      card-md shadow-sm
+      mb-10">
         <div className="card-body flex flex-col items-center text-center">
           <img src={Img4} className='w-[50px]'/>
           <h2 className="card-title text-5xl text-[#0F0F0F]font-bold"> <CountUp end={300}

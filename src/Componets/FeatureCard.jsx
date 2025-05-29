@@ -5,7 +5,8 @@ const FeatureCard = ({ task }) => {
 return (
   <div>
           
- <div className="card bg-base-100 shadow-sm">
+ <div className="card bg-[#FAFFCA]
+ shadow-sm">
    <div className="card-body">
     <span className="badge badge-xs 
     badge-warning 

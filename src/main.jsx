@@ -18,10 +18,7 @@ import AuthProvider from './context/AuthProvider.jsx';
 import Contact from './Pages/Contact.jsx';
 import UpadateTask from './Componets/UpadateTask.jsx';
 import PrivateRoute from './context/PrivateRoute.jsx';
-
-
-
-
+import { ThemeProvider } from './ThemeContext/ThemeContext.jsx';
 
 const router = createBrowserRouter([
   {
@@ -88,8 +85,13 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider>
+<ThemeProvider>
+ <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
+</ThemeProvider>
+
+
+   
   </StrictMode>,
 )

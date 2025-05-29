@@ -3,6 +3,7 @@ import logo from "../assets/mylogo.png"
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
  import userIcon from "../assets/user.png";
+import DarkModeToggler from './DarkModeToggler';
 const NavBar = () => {
 
     const {user,logOut} = use(AuthContext);
@@ -108,6 +109,8 @@ text-[#f000b8]'>
 
 
 <div className="navbar-end">
+  <div><DarkModeToggler></DarkModeToggler></div>
+  
   {!user ? (
     <div className="hidden lg:flex gap-4 items-center">
       <Link to="/auth/login">

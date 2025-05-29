@@ -6,7 +6,7 @@ import FeatureTask from '../Componets/FeatureTask';
 
 const Home = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-gray">
 <Banner></Banner>
 <FeatureTask></FeatureTask>
 <Different></Different>
