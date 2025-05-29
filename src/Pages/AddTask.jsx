@@ -16,7 +16,7 @@ const AddTask = () => {
   console.log(newTask);
 
 //server db method add
-fetch('http://localhost:5000/tasks',{
+fetch('https://my-freelancefusion-server.vercel.app/tasks',{
        method: "POST",
        headers:{
            "Content-Type": "application/json",

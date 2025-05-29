@@ -14,7 +14,7 @@ const {_id,title,category,description,deadline,budget,details,userName,email} = 
         console.log(updatedTask);
 
         // send updated task to the database
-       fetch(`http://localhost:5000/tasks/${_id}`, {
+       fetch(`https://my-freelancefusion-server.vercel.app/tasks/${_id}`, {
   method: "PUT",
   headers: {
     'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ onSubmit={handleUpdateTask}>
     </div>
      <input type="submit" 
      className='btn w-full mt-2' 
-     value="Udate Your Info" />
+     value="Update Your Info" />
 
       </form>
         </div>

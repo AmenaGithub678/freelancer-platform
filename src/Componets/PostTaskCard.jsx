@@ -21,7 +21,7 @@ console.log(result.isConfirmed);
  if (result.isConfirmed) {
   
     // start deleting method
-    fetch(`http://localhost:5000/tasks/${_id}`,{
+    fetch(`https://my-freelancefusion-server.vercel.app/tasks/${_id}`,{
     method: "DELETE"
     }).then(res=>res.json())
     .then(data=>{

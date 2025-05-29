@@ -41,12 +41,12 @@ const router = createBrowserRouter([
           },
           {
         path: "/browse-task",
-        loader: () =>fetch('http://localhost:5000/tasks'),
+        loader: () =>fetch('https://my-freelancefusion-server.vercel.app/tasks'),
         Component: BrowseTasks,
           },
         {
           path:'/task-details/:id',
-          loader: () => fetch('http://localhost:5000/tasks'),
+          loader: () => fetch('https://my-freelancefusion-server.vercel.app/tasks'),
           Component: TaskDetails,
         },
           {
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
           },
           {
             path: '/updateTask/:id',
-            loader: ({params}) =>fetch(`http://localhost:5000/tasks/${params.id}`),
+            loader: ({params}) =>fetch(`https://my-freelancefusion-server.vercel.app/tasks/${params.id}`),
             Component: UpadateTask,
           },
 

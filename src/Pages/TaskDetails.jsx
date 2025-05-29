@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { useLoaderData, useNavigation, useParams } from 'react-router';
 import TaskDetailsCard from '../Componets/TaskDetailsCard';
+import LoadingSpinner from '../Componets/LoadingSpinner';
 
 const TaskDetails = () => {
     const data = useLoaderData()
+
+     const navigation = useNavigation();
+
     console.log(data);
     const {id} =useParams();
 
@@ -18,7 +22,7 @@ const TaskDetails = () => {
 
 const handleBid = async (taskId) => {
   try {
-    const res = await fetch(`http://localhost:5000/tasks/${taskId}/bid`, {
+    const res = await fetch(`https://my-freelancefusion-server.vercel.app/tasks/${taskId}/bid`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
@@ -36,6 +40,9 @@ const handleBid = async (taskId) => {
   }
 };
 
+ if (navigation.state === 'loading') {
+    return <LoadingSpinner></LoadingSpinner>;
+  }
 
     return (
         <div>

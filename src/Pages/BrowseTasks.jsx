@@ -1,10 +1,17 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigation } from 'react-router';
 import TaskTable from '../Componets/TaskTable';
+import LoadingSpinner from '../Componets/LoadingSpinner';
 
 const BrowseTasks = () => {
     const tasks =useLoaderData()
-    console.log(tasks);
+
+     const navigation = useNavigation();
+
+      if (navigation.state === 'loading') {
+    return <LoadingSpinner></LoadingSpinner>;  
+  }
+   
     return (
 <div>
 <h1 className='font-bold text-4xl 

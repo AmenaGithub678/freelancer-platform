@@ -2,6 +2,7 @@ import { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
+import Swal from "sweetalert2";
 
 const Login = () => {
 const {signIn,
@@ -28,12 +29,23 @@ const [useEmail, setUserEmail] = useState("");
       const user = result.user;
       console.log(user);
 
+ Swal.fire({
+      icon: 'success',
+      title: 'Login Successfully!!',
+      text: 'You have successfully logged in!',
+      showConfirmButton: false,
+      timer: 2000
+    });      
+
       navigate(location?.state ? location.state : "/")
      })
      .catch((error)=>{
       const errorCode = error.code;
-      const errorMessage = error.errorMessage;
-      alert(errorCode,errorMessage)
+Swal.fire({
+    icon: 'error',
+    title: 'Login Failed',
+    text: error.message || 'Invalid credentials!',
+  });
      });
 
 
@@ -42,10 +54,20 @@ const [useEmail, setUserEmail] = useState("");
 const handlewhithMygoogle = () => {
   loginWithGoogle()
   .then(()=>{
-    alert('successfully login with google!!')
+    Swal.fire({
+      icon: 'success',
+      title: 'Login Successful',
+      text: 'You have logged in with Google!',
+      showConfirmButton: false,
+      timer: 2000
+    });
   })
   .catch((error)=>{
-
+ Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: error.message || 'Something went wrong with Google login!'
+    });
   })
 }
     return (
@@ -88,7 +110,7 @@ const handlewhithMygoogle = () => {
 
                 {/* {error && <p className="text-red-400 text-xs">{error}</p>} */}
 
-                <button type="submit" className="btn btn-neutral mt-4">
+<button type="submit" className="btn btn-neutral mt-4">
                   Login
                 </button>
                 <p className="font-semibold text-center pt-5">

@@ -6,7 +6,7 @@ const { user } = use(AuthContext);
     const [tasks, setTasks] = useState([]);
 
  useEffect(() => {
-  fetch(`http://localhost:5000/task/${user?.email}`)
+  fetch(`https://my-freelancefusion-server.vercel.app/task/${user?.email}`)
     .then(res => res.json())
     .then(data => setTasks(data));
 }, [user]);
