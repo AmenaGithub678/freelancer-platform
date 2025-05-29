@@ -1,12 +1,50 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Freelance Fusion
 
-Currently, two official plugins are available:
+Freelance Fusion is a full-stack freelance task marketplace web application where users can post freelance jobs/tasks, and others can place bids on them. This platform connects clients with freelancers efficiently.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-  🔐 User authentication using Firebase (Register/Login/Logout)
+-📝 Add a freelance task (title, category, budget, deadline, description)
+- 📄 View all posted tasks
+- 📥 Place bids on any task (bid count increases dynamically)
+- 👤 "My Posted Tasks" page to manage your tasks (Update/Delete/View Bids)
+- 📊 Task filtering and sorting by category or deadline
+- ✅ Alerts for successful actions
+- 📱 Fully responsive design (Mobile & Desktop)
+
+
+
+## Tech Stack
+
+### 🔷 Frontend:
+- React.js
+- React Router
+- Firebase Authentication
+- Tailwind CSS
+- DaisyUI 
+- React Icons (optional)
+
+### 🔶 Backend:
+- Node.js
+- Express.js
+- MongoDB
+- CORS, dotenv
+
+
+## Demo
+
+
+
+
+
+## Documentation
+
+[Live Link]( https://freelance-application-5ac09.web.app
+)
+
+[server link](https://my-freelancefusion-server.vercel.app/)
+
+
