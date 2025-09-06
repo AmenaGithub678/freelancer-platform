@@ -21,10 +21,10 @@ const { text } = useTypewriter({
 <div className='mt-25 w-11/12 mx-auto'>
       
 <div className=' content-center items-center text-center'>
-  <h1 className='font-bold text-4xl text-[#AD56C4]'>
+  <h1 className='font-bold text-4xl  text-[#AD56C4]'>
    Our Acheviment
   </h1>
-  <h1 className='font-normal text-lg text-[#f000b8]' style={{margin:'50px'}}>
+  <h1 className='font-normal text-lg text-[#f000b8]'>
     Work with Clients Who Value Your Talent. Build a Future You’re Proud Of  
     <span style={{fontWeight: 'bold', color: 'green'}}>
 {text}

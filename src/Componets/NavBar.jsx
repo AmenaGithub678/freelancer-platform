@@ -18,7 +18,7 @@ alert('successfully logOut')
 });
     }
     return (
-      <div className='w-full mx-auto'>
+<div className='w-full mx-auto'>
 <div className="navbar bg-base-100 shadow-sm mt-8">
 <div className="navbar-start">
     {/* dropdown */}

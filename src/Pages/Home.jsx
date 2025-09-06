@@ -3,6 +3,7 @@ import Counter from '../Componets/Counter';
 import Different from '../Componets/Different';
 import Banner from '../Componets/Banner';
 import FeatureTask from '../Componets/FeatureTask';
+import Works from '../Componets/Works';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
 <Banner></Banner>
 <FeatureTask></FeatureTask>
 <Different></Different>
+<Works></Works>
 <Counter></Counter>
         </div>
     );

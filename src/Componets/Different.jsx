@@ -1,53 +1,110 @@
-import React from 'react';
+import React from "react";
 import { GrAchievement } from "react-icons/gr";
-import { GiPayMoney } from "react-icons/gi";
-import { AiOutlineSafety } from "react-icons/ai";
-import acheivementImg from "../assets/acheviment.png"
+import { GiPayMoney, GiTeamIdea } from "react-icons/gi";
+import { AiOutlineSafety, AiOutlineGlobal } from "react-icons/ai";
+import { MdSupportAgent } from "react-icons/md";
+import { motion } from "framer-motion";
+import { Link } from "react-router";
+
+const features = [
+  {
+    icon: <GrAchievement size={35} />,
+    title: "Proof of Talent",
+    desc: "Verified profiles, real feedback, and clear credentials.",
+  },
+  {
+    icon: <GiPayMoney size={37} />,
+    title: "Pay Only When You Hire",
+    desc: "Interview for free, pay once you’re satisfied.",
+  },
+  {
+    icon: <AiOutlineSafety size={35} />,
+    title: "24/7 Secure Platform",
+    desc: "Your work and privacy are always protected.",
+  },
+  {
+    icon: <GiTeamIdea size={37} />,
+    title: "Smart Collaboration",
+    desc: "Built-in tools to track projects and communicate effectively.",
+  },
+  {
+    icon: <AiOutlineGlobal size={35} />,
+    title: "Global Opportunities",
+    desc: "Connect with clients and freelancers worldwide.",
+  },
+  {
+    icon: <MdSupportAgent size={37} />,
+    title: "Dedicated Support",
+    desc: "Round-the-clock support to help you resolve issues quickly.",
+  },
+];
+
 const Different = () => {
-    return (
+  return (
+    <div className="my-12 mx-auto px-4">
+      <div className="flex flex-col lg:flex-row items-center bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg rounded-2xl overflow-hidden">
+        {/* Text Section */}
+        <motion.div
+          className="w-full lg:w-1/2 p-8"
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">
+            Why{" "}
+            <span className="text-yellow-300 italic">Freelance Fusion</span>{" "}
+            is Different From Others!
+          </h2>
+          <ul className="space-y-5 text-gray-200">
+            {features.map((item, index) => (
+              <motion.li
+                key={index}
+                className="flex items-start gap-3"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <span className="text-yellow-300 mt-1">{item.icon}</span>
+                <p className="italic">
+                  <span className="font-bold not-italic text-white">
+                    {item.title} –
+                  </span>{" "}
+                  {item.desc}
+                </p>
+              </motion.li>
+            ))}
+          </ul>
 
+          <div className="mt-8">
+            <Link to="/auth/login">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn btn-active btn-info px-6 py-3 rounded-full shadow-md"
+              >
+                Log In Now
+              </motion.button>
+            </Link>
+          </div>
+        </motion.div>
 
-<div className="my-16 mx-auto px-4 ">
-  <div className="flex flex-col lg:flex-row items-center bg-[#AD56C4] shadow-md rounded-lg overflow-hidden">
-    
-    {/* Text Section */}
-<div className="w-full lg:w-1/2 p-8">
-<h2 className="text-3xl font-bold mb-4 text-white">
-   Why <span className='text-[#f000b8]'>Freelance Fusion</span> is Different From Others!
-</h2>
-<ul className="space-y-4 text-gray-700">
-<li className="flex items-start">
-    <span className="text-[#FFFA8D] font-bold mr-2">
-        <GrAchievement size={35}/></span>
-        <p className='text-white italic'> <span className='text-white font-bold italic'> Proof of talent –</span >  Verified profiles, real feedback, and clear credentials.</p>
-        </li>
-<li className="flex items-start">
-    <span className="text-[#FFFA8D] font-bold mr-2"><GiPayMoney size={37}/></span>
-          <p  className='text-white italic'><span className='text-white font-bold italic'>Pay only when you hire – </span>Interview for free, pay once you’re satisfied.</p>
-</li>
-<li className="flex items-start">
-<span className="text-[#FFFA8D] font-bold mr-2"><AiOutlineSafety size={35}/></span>
-    <p className='text-white italic'>
-        <span className='text-white font-bold italic'>24/7 secure platform – </span>Your work and privacy are always protected.</p>
-        </li>
-      </ul>
-<div className="mt-6">
-  <button className="btn btn-primary">Log In Now</button>
+        {/* Image Section */}
+        <motion.div
+          className="w-full lg:w-1/2"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <img
+            src="https://i.ibb.co.com/3qmMVnF/variety-people-multitasking-3d-cartoon-scene.jpg"
+            alt="Freelancer"
+            className="w-full h-full object-cover rounded-t-lg lg:rounded-none"
+          />
+        </motion.div>
       </div>
     </div>
-
-    {/* Image Section */}
-    <div className="w-full lg:w-1/2">
-      <img
-        src={acheivementImg}
-        alt="Freelancer"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
-</div>
-
-    );
+  );
 };
 
 export default Different;

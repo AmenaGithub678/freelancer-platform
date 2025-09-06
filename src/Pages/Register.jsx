@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import Swal from 'sweetalert2';
 const Register = () => {
 
-    const {
+const {
       createUser,setUser,
       loginWithGoogle
     } = use(AuthContext);

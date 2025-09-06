@@ -42,8 +42,6 @@ console.log(result.isConfirmed);
   }
 });
 
-
-
     }
     return (
          <div className="card bg-base-100 shadow-sm border border-gray-200 px-4 py-4">
