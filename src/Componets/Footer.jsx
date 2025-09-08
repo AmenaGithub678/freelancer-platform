@@ -5,7 +5,7 @@ import logo from "../assets/mylogo.png"
 import { MdAttachEmail } from "react-icons/md";
 const Footer = () => {
     return (
- <footer className="bg-[#FFBDA1] px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full  md:px-24 lg:px-8 rounded">
+ <footer className="bg-[#FFE6D9] px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full  md:px-24 lg:px-8 rounded">
       <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
         
         {/* Brand + About */}

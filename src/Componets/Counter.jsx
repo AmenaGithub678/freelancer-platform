@@ -36,20 +36,20 @@ const { text } = useTypewriter({
       
  <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 '>
 <div className="card  
-bg-[#FAFFCA] card-md 
+bg-[#FFE6D9] card-md 
 shadow-sm mb-5">
 <div className="card-body flex flex-col items-center text-center">
   <img src={Img1} className='w-[50px]'/>
           <h2 className="card-title text-5xl text-[#0F0F0F] font-bold">  <CountUp end={199} 
            duration={2.75}
            delay={1}/>+</h2>
-          <p className='text-xl font-medium text-[#FF8DA1]'>Unlimited Job List</p>
+          <p className='text-xl font-medium text-[#AD56C4] '>Unlimited Job List</p>
          
         </div>
       </div>
       
       <div className="card  
-      bg-[#FAFFCA]
+      bg-[#FFE6D9]
       card-md shadow-sm
      mb-5">
         <div className="card-body flex flex-col items-center text-center">
@@ -58,13 +58,13 @@ shadow-sm mb-5">
           <h2 className="card-title text-5xl text-[#0F0F0F] font-bold"><CountUp end={467} 
            duration={2.75}
            delay={1}/>+</h2>
-          <p className='text-xl font-medium text-[#FF8DA1]'>Earning</p>
+          <p className='text-xl font-medium text-[#AD56C4] '>Earning</p>
          
         </div>
       </div>
       
       <div className="card 
-      bg-[#FAFFCA] 
+      bg-[#FFE6D9] 
       card-md shadow-sm
      mb-5">
         <div className="card-body flex flex-col items-center text-center">
@@ -72,13 +72,13 @@ shadow-sm mb-5">
           <img src={Img3} className='w-[50px]'/>
           <h2 className="card-title text-5xl text-[#0F0F0F]font-bold"> <CountUp end={1900}  duration={2.75}
            delay={1} />+</h2>
-          <p className='text-xl font-medium text-[#FF8DA1]'>Succeful Hires</p>
+          <p className='text-xl font-medium text-[#AD56C4] '>Succeful Hires</p>
         
         </div>
       </div>
       
       <div className="card 
-      bg-[#FAFFCA]
+      bg-[#FFE6D9]
       card-md shadow-sm
       mb-5">
         <div className="card-body flex flex-col items-center text-center">
@@ -86,7 +86,7 @@ shadow-sm mb-5">
           <h2 className="card-title text-5xl text-[#0F0F0F]font-bold"> <CountUp end={300}
            duration={2.75}
            delay={1}   />+</h2>
-          <p className='text-xl font-medium text-[#FF8DA1]'>Save Time</p>
+          <p className='text-xl font-medium text-[#AD56C4] '>Save Time</p>
         </div>
       </div>
       </div>

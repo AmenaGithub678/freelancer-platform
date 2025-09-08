@@ -19,7 +19,7 @@ alert('successfully logOut')
     }
     return (
 <div className='w-full mx-auto'>
-      <div className="navbar bg-[#FFC2BA] shadow-md fixed top-0 left-0 z-50 px-4">
+      <div className="navbar bg-[#FFE6D9] shadow-md fixed top-0 left-0 z-50 px-4">
         {/* Navbar Start */}
         <div className="navbar-start">
           {/* dropdown for mobile */}

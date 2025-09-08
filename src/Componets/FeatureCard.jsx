@@ -5,14 +5,14 @@ const FeatureCard = ({ task }) => {
 return (
   <div>
           
- <div className="card bg-[#FAFFCA]
+ <div className="card bg-[#FFE6D9]
  shadow-sm">
    <div className="card-body">
     <span className="badge badge-xs 
     badge-warning 
     font-normal text-lg text-[#f000b8] py-3">{deadline}</span>
         <div className="flex justify-between">
-          <h2 className="text-2xl font-bold">{category}</h2>
+          <h2 className="text-xl lg:text-2xl font-bold">{category}</h2>
           <span className="text-xl">$
             <span className='text-gray-600'>{budget}
             </span></span>
@@ -22,7 +22,7 @@ return (
        
       </div>
     </div>
-        </div>
+  </div>
     );
 };
 

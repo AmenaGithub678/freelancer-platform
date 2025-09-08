@@ -50,10 +50,10 @@ const faqData = [
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             className="p-8 border-b sm:border-r shadow-md rounded-lg 
-            bg-[#FFBDA1]    hover:shadow-xl"
+            bg-[#0F0F0F0D]    hover:shadow-xl"
           >
             <div className="max-w-md text-center">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-indigo-50">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-[#FFBDA1]">
                 {faq.icon}
               </div>
               <h6 className="mb-2 font-semibold leading-5">{faq.question}</h6>
