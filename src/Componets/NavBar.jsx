@@ -20,7 +20,7 @@ alert('successfully logOut')
     return (
 <div className='w-full mx-auto'>
       <div className="navbar bg-[#FFC2BA] shadow-md fixed top-0 left-0 z-50 px-4">
-        {/* 📌 Navbar Start */}
+        {/* Navbar Start */}
         <div className="navbar-start">
           {/* dropdown for mobile */}
           <div className="dropdown">
@@ -42,6 +42,13 @@ alert('successfully logOut')
                   isActive ? "text-[#AD56C4] font-bold" : "text-gray-600 font-semibold"
                 }>Home</NavLink>
               </li>
+
+            <li>
+                <NavLink to='/about' className={({ isActive }) =>
+                  isActive ? "text-[#AD56C4] font-bold" : "text-gray-600 font-semibold"
+                }>About</NavLink>
+              </li>
+
               <li>
                 <NavLink to='/browse-task' className={({ isActive }) =>
                   isActive ? "text-[#AD56C4] font-bold" : "text-gray-600 font-semibold"
@@ -83,7 +90,7 @@ alert('successfully logOut')
           </Link>
         </div>
 
-        {/* 📌 Navbar Center (desktop menu) */}
+        {/* Navbar Center (desktop menu) */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-4">
             <li>
@@ -91,13 +98,19 @@ alert('successfully logOut')
                 isActive ? "text-[#AD56C4] font-bold" : "text-gray-600 font-semibold"
               }>Home</NavLink>
             </li>
+
+             <li>
+              <NavLink to='/about' className={({ isActive }) =>
+                isActive ? "text-[#AD56C4] font-bold" : "text-gray-600 font-semibold"
+              }>About</NavLink>
+            </li>
             <li>
               <NavLink to='/browse-task' className={({ isActive }) =>
                 isActive ? "text-[#AD56C4] font-bold" : "text-gray-600 font-semibold"
               }>Browse Tasks</NavLink>
             </li>
 
-            {/* 📌 Show these only for logged in users */}
+            {/*  Show these only for logged in users */}
             {user && (
               <>
                 <li>
@@ -139,7 +152,7 @@ alert('successfully logOut')
                 className="menu menu-sm dropdown-content bg-white rounded-box z-10 mt-3 w-52 p-2 shadow">
                 <li className="font-semibold text-gray-700">{user?.displayName || user?.email}</li>
 
-                {/* 📌 Add Task + My Posted Task in dropdown */}
+                {/* Add Task + My Posted Task in dropdown */}
                 <li>
                   <NavLink to="/add-task">Add Task</NavLink>
                 </li>

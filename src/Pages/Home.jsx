@@ -6,6 +6,7 @@ import FeatureTask from '../Componets/FeatureTask';
 import Works from '../Componets/Works';
 import WhyChooseUs from '../Componets/WhyChooseUs';
 import Faq from '../Componets/Faq';
+import Pricing from '../Componets/Pricing';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
 <Works></Works>
 <WhyChooseUs></WhyChooseUs>
 <Counter></Counter>
+<Pricing></Pricing>
 <Faq></Faq>
         </div>
     );

@@ -19,6 +19,7 @@ import Contact from './Pages/Contact.jsx';
 import UpadateTask from './Componets/UpadateTask.jsx';
 import PrivateRoute from './context/PrivateRoute.jsx';
 import { ThemeProvider } from './ThemeContext/ThemeContext.jsx';
+import About from './Pages/About.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         {
         path: "/",
         Component: Home,
+          },
+          {
+        path: "/about",
+        Component: About,
           },
             {
         path: "/add-task",

@@ -12,8 +12,7 @@ const FeatureTask = () => {
   }, []);
 
     return (
-        <div className='bg-gradient-to-br from-[#FFF5FA] to-[#F3E8FF] 
-        '>
+        <div >
  <h1 
  className='mx-auto text-center font-bold text-4xl 
  text-[#AD56C4] my-10 '>Features Task</h1>

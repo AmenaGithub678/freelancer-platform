@@ -18,7 +18,7 @@ const { text } = useTypewriter({
 });
 
     return (
-<div className=' w-11/12 mx-auto'>
+<div className=' w-11/12 mx-auto my-10'>
       
 <div className=' content-center items-center text-center'>
   <h1 className='font-bold text-3xl  text-[#AD56C4]'>
