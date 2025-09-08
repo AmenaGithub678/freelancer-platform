@@ -71,88 +71,94 @@ const handlewhithMygoogle = () => {
   })
 }
     return (
-<div>
-<div className="flex justify-center min-h-screen items-center"
-        // style={{
-        //   backgroundImage: `url(${bgImage})`,
-        // }}
-        >
-  <div className="hero-content flex-col lg:flex-row-reverse">
-  <div className="card w-full max-w-lg shadow-2xl bg-white py-8 px-6 rounded-lg">
-  <h2 className="font-semibold text-lg text-center">
-    Login
-  </h2>
-  <form 
-  onSubmit={handleLogin} className="card-body">
-              <fieldset className="fieldset">
-                {/* email  */}
-                <label className="label">Email</label>
-                <input
-                  ref={refEmail}
-                  name="email"
-                  type="email"
-                  className="input"
-                  placeholder="Email"
-                  value={useEmail}
-                  onChange={(e) => setUserEmail(e.target.value)}
+<div className="relative flex justify-center min-h-screen items-center bg-gradient-to-br from-[#FFF5FA] to-[#F3E8FF] mt-15 ">
+      
+      {/* 🔙 Go Back Button - Top Left */}
+      <Link to="/" className="absolute top-5 left-5 ">
+        <button className="btn btn-error btn-sm rounded-full shadow-md hover:scale-105 transition">
+          ⬅ Home
+        </button>
+      </Link>
 
-                  required
-                />
-                {/* passowrd  */}
-                <label className="label">Password</label>
-                <input
-                  name="password"
-                  type="text"
-                  className="input"
-                  placeholder="Password"
-                  required
-                />
+      <div className="hero-content flex-col lg:flex-row-reverse w-full">
+        <div className="card w-full max-w-lg shadow-xl bg-white p-6 rounded-2xl">
+          
+          {/* Title */}
+          <h2 className="font-bold text-2xl text-center text-[#AD56C4]">
+            Welcome Back 👋
+          </h2>
+          <p className="text-sm text-center text-gray-500 mb-3">
+            Please login to continue
+          </p>
 
-                {/* {error && <p className="text-red-400 text-xs">{error}</p>} */}
+          {/* Form */}
+          <form onSubmit={handleLogin} className="card-body">
+            <fieldset className="fieldset space-y-3">
+              
+              {/* Email */}
+              <label className="label font-semibold">Email</label>
+              <input
+                ref={refEmail}
+                name="email"
+                type="email"
+                className="input input-bordered w-full"
+                placeholder="Enter your email"
+                value={useEmail}
+                onChange={(e) => setUserEmail(e.target.value)}
+                required
+              />
 
-<button type="submit" className="btn btn-neutral mt-4">
-                  Login
-                </button>
-                <p className="font-semibold text-center pt-5">
-                  Dont’t Have An Account ?{" "}
-                  <Link className="text-secondary" to="/auth/register">
-                    Register
-                  </Link>
-                </p>
-                {/* google */}
-                <p className='text-center font-semibold'>Or</p>
-                <div className="mt-1">
+              {/* Password */}
+              <label className="label font-semibold">Password</label>
+              <input
+                name="password"
+                type="password"
+                className="input input-bordered w-full"
+                placeholder="Enter your password"
+                required
+              />
 
-  <button 
-    onClick={handlewhithMygoogle} 
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="btn bg-[#AD56C4] text-white hover:bg-[#f000b8] mt-2"
+              >
+                Login
+              </button>
 
-className="btn btn-outline w-full flex items-center justify-center gap-2">
-                     Login 
-     <FcGoogle className="text-xl" />
+              {/* Forgot Password */}
+              <button
+                type="button"
+                className="text-sm text-secondary hover:underline mx-auto"
+              >
+                Forgot Password?
+              </button>
 
-                   
-                  </button>
-                </div>
-
-                <Link to="/" className='mx-auto mt-2'>
-                  <button className="btn btn-error">Go Back to home</button>
+              {/* Register Redirect */}
+              <p className="text-center font-medium text-gray-600 text-sm ">
+                Don’t have an account?{" "}
+                <Link className="text-[#AD56C4] hover:underline font-bold" to="/auth/register">
+                  Register
                 </Link>
+              </p>
 
-              </fieldset>
-            <button 
+              {/* Divider */}
+              <div className="divider text-sm">OR</div>
 
-            // onClick={handleResetPassward}
-
-              className='btn btn-soft'>
-              Forgot Password
-            </button>
-            </form>
-
-
-          </div>
+              {/* Google Login */}
+              <button
+                onClick={handlewhithMygoogle}
+                type="button"
+                className="btn btn-outline w-full flex items-center justify-center  hover:bg-gray-100"
+              >
+                Continue with 
+                <FcGoogle className="text-sm" />
+              </button>
+            </fieldset>
+          </form>
         </div>
       </div>
-        </div>
+    </div>
     );
 };
 

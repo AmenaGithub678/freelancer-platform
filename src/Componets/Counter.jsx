@@ -18,10 +18,10 @@ const { text } = useTypewriter({
 });
 
     return (
-<div className='mt-25 w-11/12 mx-auto'>
+<div className=' w-11/12 mx-auto'>
       
 <div className=' content-center items-center text-center'>
-  <h1 className='font-bold text-4xl  text-[#AD56C4]'>
+  <h1 className='font-bold text-3xl  text-[#AD56C4]'>
    Our Acheviment
   </h1>
   <h1 className='font-normal text-lg text-[#f000b8]'>
@@ -37,7 +37,7 @@ const { text } = useTypewriter({
  <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 '>
 <div className="card  
 bg-[#FAFFCA] card-md 
-shadow-sm mb-10">
+shadow-sm mb-5">
 <div className="card-body flex flex-col items-center text-center">
   <img src={Img1} className='w-[50px]'/>
           <h2 className="card-title text-5xl text-[#0F0F0F] font-bold">  <CountUp end={199} 
@@ -51,7 +51,7 @@ shadow-sm mb-10">
       <div className="card  
       bg-[#FAFFCA]
       card-md shadow-sm
-      mb-10">
+     mb-5">
         <div className="card-body flex flex-col items-center text-center">
          
           <img src={Img2} className='w-[50px]'/>
@@ -66,7 +66,7 @@ shadow-sm mb-10">
       <div className="card 
       bg-[#FAFFCA] 
       card-md shadow-sm
-      mb-10">
+     mb-5">
         <div className="card-body flex flex-col items-center text-center">
        
           <img src={Img3} className='w-[50px]'/>
@@ -80,14 +80,13 @@ shadow-sm mb-10">
       <div className="card 
       bg-[#FAFFCA]
       card-md shadow-sm
-      mb-10">
+      mb-5">
         <div className="card-body flex flex-col items-center text-center">
           <img src={Img4} className='w-[50px]'/>
           <h2 className="card-title text-5xl text-[#0F0F0F]font-bold"> <CountUp end={300}
            duration={2.75}
            delay={1}   />+</h2>
           <p className='text-xl font-medium text-[#FF8DA1]'>Save Time</p>
-         
         </div>
       </div>
       </div>

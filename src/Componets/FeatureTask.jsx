@@ -12,10 +12,11 @@ const FeatureTask = () => {
   }, []);
 
     return (
-        <div>
+        <div className='bg-gradient-to-br from-[#FFF5FA] to-[#F3E8FF] 
+        '>
  <h1 
  className='mx-auto text-center font-bold text-4xl 
- text-[#AD56C4] my-10'>Features Task</h1>
+ text-[#AD56C4] my-10 '>Features Task</h1>
 
  <div className="grid 
  grid-cols-1 

@@ -41,7 +41,7 @@ const features = [
 
 const Different = () => {
   return (
-    <div className="my-12 mx-auto px-4">
+    <div className="my-12 mx-auto px-4 mt-10">
       <div className="flex flex-col lg:flex-row items-center bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg rounded-2xl overflow-hidden">
         {/* Text Section */}
         <motion.div

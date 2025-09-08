@@ -5,9 +5,7 @@ import LoadingSpinner from '../Componets/LoadingSpinner';
 
 const TaskDetails = () => {
     const data = useLoaderData()
-
-     const navigation = useNavigation();
-
+    const navigation = useNavigation();
     console.log(data);
     const {id} =useParams();
 
@@ -45,15 +43,15 @@ const handleBid = async (taskId) => {
   }
 
     return (
-        <div>
+    <div className='bg-gradient-to-br from-[#FFF5FA] to-[#F3E8FF] ' >
  <h1 className='text-2xl text-[#AD56C4] text-center font-bold
-            my-10  '>Want To Know About More! Welcome to task details page</h1>
+            mt-20  '>Want To Know About More! Welcome to task details page</h1>
 <div >
  <TaskDetailsCard taskDetails={taskDetails}
  handleBid={handleBid}></TaskDetailsCard>
 </div>
            
-        </div>
+   </div>
     );
 };
 

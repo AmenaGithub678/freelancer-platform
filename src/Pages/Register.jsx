@@ -78,91 +78,105 @@ const handleMygoogle = () =>{
 
   })
 }
-
-
     return (
-<div className="flex justify-center min-h-screen items-center"
-    //   style={{
-    //     backgroundImage: `url(${bgImage})`,
-    //   }}
-      >
-      <div className="hero-content flex-col lg:flex-row-reverse">       
-      <div className="card w-full max-w-lg shadow-2xl bg-white py-8 px-6 rounded-lg">
-      <h2 className="font-semibold text-lg text-center">
-         Create Your Account
-        </h2>
-<form 
-onSubmit={handleRegister} 
+<div className="flex justify-center items-center min-h-screen px-4 bg-gradient-to-br from-[#FFF5FA] to-[#F3E8FF] mt-15">
+  <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-4xl">
+    {/* Card Section */}
+    <div className="card w-full sm:w-[90%] md:w-[70%] lg:w-[50%] shadow-lg bg-white py-8 px-6 rounded-2xl border hover:shadow-2xl transition duration-300">
+      
+      {/* Heading */}
+      <h2 className="font-bold text-base md:text-3xl text-center text-[#AD56C4] mb-6">
+        Create Your Account
+      </h2>
 
-className="card-body">
-          <fieldset className="fieldset">
-            {/* Name  */}
-            <label className="label">Name</label>
-            <input
-              name="name"
-              type="text"
-              className="input"
-              placeholder="Name"
-              required
-            />
+      {/* Form */}
+      <form onSubmit={handleRegister} className="space-y-4">
+        
+        {/* Name */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-700">Full Name</label>
+          <input
+            name="name"
+            type="text"
+            className="input input-bordered w-full mt-1"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        {/* Photo URL */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-700">Photo URL</label>
+          <input
+            name="photo"
+            type="text"
+            className="input input-bordered w-full mt-1"
+            placeholder="Enter photo URL"
+            required
+          />
+        </div>
+
+        {/* Email */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-700">Email</label>
+          <input
+            name="email"
+            type="email"
+            className="input input-bordered w-full mt-1"
+            placeholder="Enter email"
+            required
+          />
+        </div>
+
+        {/* Password */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-700">Password</label>
+          <input
+            name="password"
+            type="password"
+            className="input input-bordered w-full mt-1"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+
+        {/* Register Button */}
+        <button
+          type="submit"
+          className="btn bg-[#AD56C4] hover:bg-[#f000b8] text-white w-full mt-4 rounded-lg"
+        >
+          Register
+        </button>
+
+        {/* Login Link */}
+        <p className="text-center font-medium text-gray-600 text-sm mt-2">
+          Already have an account?{" "}
+          <Link className="text-[#f000b8] font-semibold hover:underline" to="/auth/login">
+            Login
+          </Link>
+        </p>
+
+        {/* Divider */}
+        <div className="flex items-center gap-2 my-4">
+          <hr className="flex-grow border-gray-300" />
+          <span className="text-gray-500 text-sm">OR</span>
+          <hr className="flex-grow border-gray-300" />
+        </div>
+
+        {/* Google Auth Button */}
+        <button
+          onClick={handleMygoogle}
+          className="btn btn-outline w-full flex items-center justify-center gap-1 hover:shadow-md"
+        >
+            Register with 
+          <FcGoogle className="text-base" />
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
 
 
-            {/* Photo URl  */}
-   <label className="label">
-    Photo URl </label>
-    <input
-    name="photo"
-    type="text"
-    className="input"
-    placeholder="Photo URl"
-    required
-    />
-
-    {/* email  */}
-    <label className="label">Email</label>
-      <input
-        name="email"
-        type="email"
-        className="input"
-        placeholder="Email"
-        required
-         />
-
-       {/* password  */}
-   <label className="label">Password</label>
-        <input
-         name="password"
-         type="text"
-         className="input"
-         placeholder="Password"
-         required
-            />
-
-    <button type="submit" className="btn btn-neutral mt-4">
-              Register
-            </button>
-            <p className="font-semibold text-center pt-5">
-      Have An Account ? just{" "} 
- <Link className="text-secondary" to="/auth/login">
-      Login
-    </Link>
-   </p>
- <p className='text-center font-semibold'>Or</p>
- <div className="mt-1">
-  <button 
-  
-  onClick={handleMygoogle} 
-  
-  className="btn btn-outline w-full flex items-center justify-center gap-2">
-  Register 
-    <FcGoogle className="text-xl" />
-  </button>
-</div>           
-          </fieldset>
-        </form>
-                </div>
-              </div>
-            </div>
     );
 };
 
