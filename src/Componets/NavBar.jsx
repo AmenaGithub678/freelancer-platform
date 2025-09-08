@@ -83,7 +83,8 @@ alert('successfully logOut')
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} 
-                 className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] rounded object-contain hidden lg:block" />
+                 className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] rounded object-contain  lg:block" />
+            
             <h1 className="text-base lg:text-lg font-bold text-[#AD56C4]">
               FreeLance<span className="text-[#FF9CE9]">Fusion</span>
             </h1>
