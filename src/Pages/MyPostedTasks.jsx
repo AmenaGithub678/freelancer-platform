@@ -25,10 +25,10 @@ const handleUpdate = (task) => {
     console.log('View bids for task ID:', id);
     // Show modal 
   };
-
     return (
-<div className="max-w-5xl mx-auto px-4 py-6">
-      <h1 className="text-6xl text-[#AD56C4] text-center my-5">My Posted Tasks</h1>
+<div className="my-10
+ lg:my-20 mx-auto px-4 py-6 ">
+      <h1 className="text-lg lg:text-3xl text-[#AD56C4] text-center my-5 font-bold">My Posted Tasks</h1>
 
       {tasks.length === 0 ? (
         <p className="text-center text-gray-500">No tasks posted yet.</p>

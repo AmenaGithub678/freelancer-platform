@@ -44,8 +44,8 @@ const handleBid = async (taskId) => {
 
     return (
     <div className='bg-gradient-to-br from-[#FFF5FA] to-[#F3E8FF] ' >
- <h1 className='text-2xl text-[#AD56C4] text-center font-bold
-            mt-20  '>Want To Know About More! Welcome to task details page</h1>
+ <h1 className='text-lg lg:text-2xl text-[#AD56C4] text-center font-bold
+            mt-20  '>Want To Know More! Welcome to task details page</h1>
 <div >
  <TaskDetailsCard taskDetails={taskDetails}
  handleBid={handleBid}></TaskDetailsCard>
